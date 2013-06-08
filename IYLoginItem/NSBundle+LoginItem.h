@@ -1,5 +1,5 @@
 //
-//  IYLoginItem.h
+//  NSBundle+LoginItem.h
 //  IYLoginItem
 //
 //  Created by Ian Ynda-Hummel on 6/8/13.
@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface IYLoginItem : NSObject
+@interface NSBundle (LoginItem)
+
+- (BOOL)isLoginItem;
+- (void)addToLoginItems;
+- (void)removeFromLoginItems;
 
 @end
