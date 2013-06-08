@@ -13,10 +13,11 @@
 		40029A341763E8720049001F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40029A201763C32A0049001F /* Foundation.framework */; };
 		40029A371763E8840049001F /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40029A351763E87B0049001F /* CoreServices.framework */; };
 		40029A4B1763EDF20049001F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40029A491763EDF20049001F /* InfoPlist.strings */; };
-		40029A4E1763EDF30049001F /* IYLoginItemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40029A4D1763EDF30049001F /* IYLoginItemTests.m */; };
 		40029A551763EE100049001F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40029A531763EE040049001F /* SenTestingKit.framework */; };
 		40029A561763EE170049001F /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40029A351763E87B0049001F /* CoreServices.framework */; };
 		40029A571763EE170049001F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40029A201763C32A0049001F /* Foundation.framework */; };
+		408825361763EF6300B4DEDD /* IYLoginItemTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 408825351763EF6300B4DEDD /* IYLoginItemTest.m */; };
+		408825371763F05200B4DEDD /* NSBundle+LoginItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 40029A311763C3550049001F /* NSBundle+LoginItem.m */; };
 		5306FBA5CAD64AFD9A4FA4B9 /* libPods-IYLoginItemTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 932829EC31DC473DBADF7157 /* libPods-IYLoginItemTests.a */; };
 /* End PBXBuildFile section */
 
@@ -35,10 +36,9 @@
 		40029A451763EDF20049001F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		40029A481763EDF20049001F /* IYLoginItemTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IYLoginItemTests-Info.plist"; sourceTree = "<group>"; };
 		40029A4A1763EDF20049001F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		40029A4C1763EDF20049001F /* IYLoginItemTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IYLoginItemTests.h; sourceTree = "<group>"; };
-		40029A4D1763EDF30049001F /* IYLoginItemTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IYLoginItemTests.m; sourceTree = "<group>"; };
 		40029A4F1763EDF30049001F /* IYLoginItemTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IYLoginItemTests-Prefix.pch"; sourceTree = "<group>"; };
 		40029A531763EE040049001F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		408825351763EF6300B4DEDD /* IYLoginItemTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IYLoginItemTest.m; sourceTree = "<group>"; };
 		8A345368346C4D6DAF30DFFF /* Pods-IYLoginItemTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IYLoginItemTests.xcconfig"; path = "Pods/Pods-IYLoginItemTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		932829EC31DC473DBADF7157 /* libPods-IYLoginItemTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IYLoginItemTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -132,9 +132,8 @@
 		40029A461763EDF20049001F /* IYLoginItemTests */ = {
 			isa = PBXGroup;
 			children = (
-				40029A4C1763EDF20049001F /* IYLoginItemTests.h */,
-				40029A4D1763EDF30049001F /* IYLoginItemTests.m */,
 				40029A471763EDF20049001F /* Supporting Files */,
+				408825351763EF6300B4DEDD /* IYLoginItemTest.m */,
 			);
 			path = IYLoginItemTests;
 			sourceTree = "<group>";
@@ -304,7 +303,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40029A4E1763EDF30049001F /* IYLoginItemTests.m in Sources */,
+				408825361763EF6300B4DEDD /* IYLoginItemTest.m in Sources */,
+				408825371763F05200B4DEDD /* NSBundle+LoginItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
