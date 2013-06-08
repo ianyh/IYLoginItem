@@ -17,6 +17,7 @@
 		40029A551763EE100049001F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40029A531763EE040049001F /* SenTestingKit.framework */; };
 		40029A561763EE170049001F /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40029A351763E87B0049001F /* CoreServices.framework */; };
 		40029A571763EE170049001F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40029A201763C32A0049001F /* Foundation.framework */; };
+		5306FBA5CAD64AFD9A4FA4B9 /* libPods-IYLoginItemTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 932829EC31DC473DBADF7157 /* libPods-IYLoginItemTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		40029A4D1763EDF30049001F /* IYLoginItemTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IYLoginItemTests.m; sourceTree = "<group>"; };
 		40029A4F1763EDF30049001F /* IYLoginItemTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IYLoginItemTests-Prefix.pch"; sourceTree = "<group>"; };
 		40029A531763EE040049001F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		8A345368346C4D6DAF30DFFF /* Pods-IYLoginItemTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IYLoginItemTests.xcconfig"; path = "Pods/Pods-IYLoginItemTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		932829EC31DC473DBADF7157 /* libPods-IYLoginItemTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IYLoginItemTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,7 @@
 				40029A551763EE100049001F /* SenTestingKit.framework in Frameworks */,
 				40029A561763EE170049001F /* CoreServices.framework in Frameworks */,
 				40029A571763EE170049001F /* Foundation.framework in Frameworks */,
+				5306FBA5CAD64AFD9A4FA4B9 /* libPods-IYLoginItemTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +74,7 @@
 				40029A461763EDF20049001F /* IYLoginItemTests */,
 				40029A1A1763C32A0049001F /* Frameworks */,
 				40029A191763C32A0049001F /* Products */,
+				8A345368346C4D6DAF30DFFF /* Pods-IYLoginItemTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +94,7 @@
 				40029A351763E87B0049001F /* CoreServices.framework */,
 				40029A201763C32A0049001F /* Foundation.framework */,
 				40029A421763EDF20049001F /* Other Frameworks */,
+				932829EC31DC473DBADF7157 /* libPods-IYLoginItemTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -179,10 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40029A501763EDF30049001F /* Build configuration list for PBXNativeTarget "IYLoginItemTests" */;
 			buildPhases = (
+				FC124D81FE0640C8AFDC72E1 /* Check Pods Manifest.lock */,
 				40029A381763EDF20049001F /* Sources */,
 				40029A391763EDF20049001F /* Frameworks */,
 				40029A3A1763EDF20049001F /* Resources */,
 				40029A3B1763EDF20049001F /* ShellScript */,
+				FF498CD47F1B4928BC97E608 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,6 +260,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		FC124D81FE0640C8AFDC72E1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		FF498CD47F1B4928BC97E608 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-IYLoginItemTests-resources.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -385,10 +421,14 @@
 		};
 		40029A511763EDF30049001F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A345368346C4D6DAF30DFFF /* Pods-IYLoginItemTests.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IYLoginItemTests/IYLoginItemTests-Prefix.pch";
 				INFOPLIST_FILE = "IYLoginItemTests/IYLoginItemTests-Info.plist";
@@ -400,10 +440,14 @@
 		};
 		40029A521763EDF30049001F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A345368346C4D6DAF30DFFF /* Pods-IYLoginItemTests.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IYLoginItemTests/IYLoginItemTests-Prefix.pch";
 				INFOPLIST_FILE = "IYLoginItemTests/IYLoginItemTests-Info.plist";
@@ -432,6 +476,7 @@
 				40029A2F1763C32A0049001F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		40029A501763EDF30049001F /* Build configuration list for PBXNativeTarget "IYLoginItemTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +485,7 @@
 				40029A521763EDF30049001F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,13 @@
+PODS:
+  - Expecta (0.2.1)
+  - Kiwi (2.1)
+
+DEPENDENCIES:
+  - Expecta
+  - Kiwi
+
+SPEC CHECKSUMS:
+  Expecta: d46fb1bd78c90a83da0158b9b1e108de106e369f
+  Kiwi: 054ef97d0e50c279b21113a0880a906fa153a7fd
+
+COCOAPODS: 0.20.2
