@@ -2,4 +2,4 @@ language: objective-c
 before_install:
   - brew update
   - brew install xctool
-script: xctool -workspace IYLoginItem.xcworkspace -scheme IYLoginItem test
+script: xctool -workspace IYLoginItem.xcworkspace -scheme IYLoginItem clean test
