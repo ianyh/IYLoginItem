@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FA74A1C8D5BD4109B31C46F5"
+               BuildableName = "libPods-IYLoginItemTests.a"
+               BlueprintName = "Pods-IYLoginItemTests"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "40029A171763C32A0049001F"
                BuildableName = "IYLoginItem.framework"
                BlueprintName = "IYLoginItem"
