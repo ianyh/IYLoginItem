@@ -25,3 +25,14 @@ and to check if your application is currently a login item do
 ```objective-c
 [[NSBundle mainBundle] isLoginItem];
 ```
+
+How To Get It
+=============
+
+IYLoginItem is intended to be used with CocoaPods. Add
+
+```objective-c
+pod 'IYLoginItem'
+```
+
+to your Podfile and viola.
