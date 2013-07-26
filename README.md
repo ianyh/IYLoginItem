@@ -31,7 +31,7 @@ How To Get It
 
 IYLoginItem is intended to be used with CocoaPods. Add
 
-```objective-c
+```ruby
 pod 'IYLoginItem'
 ```
 
