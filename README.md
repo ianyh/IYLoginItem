@@ -1,7 +1,7 @@
 IYLoginItem
 ===========
 
-Small Objective-C library for easily adding/removing bundles from login items.
+Small Objective-C library for easily adding/removing bundles from login items. Note that this library does not work for sandboxed applications. In that case, as far as I know, the user must manually add the application to the list of login items via System Preferences.
 
 [![Build Status](https://travis-ci.org/ianyh/IYLoginItem.png)](https://travis-ci.org/ianyh/IYLoginItem)
 
