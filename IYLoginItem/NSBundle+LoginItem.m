@@ -57,7 +57,7 @@
 
 - (LSSharedFileListItemRef)itemRefWithListRef:(LSSharedFileListRef)listRef {
     NSArray *listItems = (__bridge NSArray *)LSSharedFileListCopySnapshot(listRef, NULL);
-
+    
     for (NSInteger i = 0; i < listItems.count; ++i) {
         LSSharedFileListItemRef itemRef = (__bridge LSSharedFileListItemRef)listItems[i];
         CFURLRef urlRef;
@@ -65,9 +65,14 @@
         
         if (error != noErr) continue;
         
-        if (CFEqual(urlRef, (__bridge CFURLRef)self.bundleURL)) return itemRef;
+        if (CFEqual(urlRef, (__bridge CFURLRef)self.bundleURL)) {
+            CFRelease((__bridge CFTypeRef)(listItems));
+            return itemRef;
+        }
     }
-
+    
+    CFRelease((__bridge CFTypeRef)(listItems));
+    
     return NULL;
 }
 
